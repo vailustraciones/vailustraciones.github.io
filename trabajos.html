@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>▽△ Ilustraciones</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="slideshow.css">
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="index.html" class="w3-bar-item w3-button"><b>▽△</b> Ilustraciones</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="trabajos.html" class="w3-bar-item w3-button"><b>Trabajos</b></a>
+      <a href="about.html" class="w3-bar-item w3-button">About</a>
+      <a href="contact.html" class="w3-bar-item w3-button">Contacto</a>
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  <div class="w3-container w3-padding-32" id="trabajos">
+
+ <!-- Slideshow container -->
+ <div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->  
+  <div class="mySlides fade">
+    <img src="pictures/male_1913.png" style="width:100%">
+    <div class="text"><font color="black">Male, 1913</font></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="pictures/Male_1915.png" style="width:100%">
+    <div class="text"><font color="black">Male, 1915</font></div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="pictures/male_1917.png" style="width:100%">
+    <div class="text"><font color="black">Male, 1917</font></div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pictures/ada_1993.png" style="width:100%">
+    <div class="text">Ada, 1993</div>
+  </div>
+
+  <div class="mySlides fade">
+    <img src="pictures/ada_1995.png" style="width:100%">
+    <div class="text">Ada, 1995</div>
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="pictures/ada_1998.png" style="width:100%">
+    <div class="text">Ada, 1998</div>
+  </div> 
+  
+  <div class="mySlides fade">
+    <img src="pictures/rita_2014.png" style="width:100%">
+    <div class="text">Rita, 2014</div>
+  </div> 
+  
+  <div class="mySlides fade">
+    <img src="pictures/rita_2015.png" style="width:100%">
+    <div class="text"><font color="black">Rita, 2015</font></div>
+  </div> 
+  
+  <div class="mySlides fade">
+    <img src="pictures/rita_2016.png" style="width:100%">
+    <div class="text"><font color="black">Rita, 2016</font></div>
+  </div> 
+
+  <div class="mySlides fade">
+    <img src="pictures/rita_2019.png" style="width:100%">
+    <div class="text">Rita, 2019</div>
+  </div> 
+ 
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span>
+</div> 
+</div>
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Victoria Alonso Cánovas, ARI 1ºA</p>
+</footer>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>
